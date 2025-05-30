@@ -25,6 +25,8 @@ def send_to_gpt(user_input):
             "'request' to ask the app for more information (e.g. list of files). "
             "If a user says 'Open Desktop folder' or any other folder like pictures or screenshots, respond with any appropriate address: "
             "{ \"bash\": \"explorer C:\\\\Users\\\\{user}\\\\<folder>\" }"
+            "if a user asked to open apps, do that too with appropriate bash commands assuming the apps were installed normally on the windows matchine and their locations based on web info, example- zoom workspace app, chat gpt app, etc do not open microsoft store unless asked spesifically or if told app is not isntalled on the system, "
+
         )
     },
 
@@ -101,7 +103,5 @@ output_box = tk.Text(app, height=20, state="disabled", wrap="word")
 output_box.pack(padx=10, pady=10)
 
 # Start the assistant
-display_text("Welcome to Test Assistant 1.0!")
+display_text("Windows Assistant 1.0")
 app.mainloop()
-
-#
